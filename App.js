@@ -4,8 +4,8 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './app/screens/Home';
-import Blog from './app/screens/Blog';
-import BlogDetails from './app/screens/BlogDetails';
+import BookList from './app/screens/BookList';
+import BookDetails from './app/screens/BookDetails';
 
 const Stack = createStackNavigator();
 
@@ -29,14 +29,14 @@ function NavStack() {
         options={{ title: 'Home' }}
       />
       <Stack.Screen
-        name="Blog"
-        component={Blog}
-        options={{ title: 'Blog' }}
+        name="BookList"
+        component={BookList}
+        options={{ title: 'Book list' }}
       />
       <Stack.Screen
-       name="BlogDetails"
-       component={BlogDetails}
-       options={{ title: 'Blog Detail' }}
+       name="BookDetails"
+       component={BookDetails}
+       options={{ title: 'Book Detail' }}
       />
     </Stack.Navigator>
   );
