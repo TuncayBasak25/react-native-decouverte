@@ -21,7 +21,7 @@ function BookList({ navigation }) {
           data={data}
           keyExtractor={({ id }, index) => id.toString()}
           renderItem={({ item }) => (
-            <TouchableOpacity onPress={() => navigation.navigate("BookDetails", { book: item })}>
+            <TouchableOpacity onPress={() => navigation.navigate("BookDetails", { book: item, bookList: data })}>
               <View
                 style={{ flex: 1, justifyContent: "center", padding: 5, margin: 30, flexDirection: "row", backgroundColor: "cyan", borderWidth: 5, borderColor: "grey" }}
                 onPress={() => console.log(item.title)}
@@ -32,8 +32,6 @@ function BookList({ navigation }) {
           )}
         />
       )}
-      <Text>Blog screen</Text>
-      <Button title={"Home"} onPress={() => { navigation.navigate("Home") }}></Button>
     </View>
   );
 }
